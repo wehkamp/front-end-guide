@@ -45,6 +45,7 @@ Even though PWAs are still in their infancy, we think that an ecommerce site lik
  - [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
  - [Build your first PWA](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
  - [Udacity PWA Course](https://classroom.udacity.com/courses/ud811)
+ - [Google PWA Training](https://developers.google.com/web/ilt/pwa/)
 
 ## JavaScript Language
 
@@ -74,3 +75,5 @@ The features of ReactJS are:
   - **High performance** - Changes in `props` and `state` are not directly translated to the DOM, but are first applied to the so-called Virtual DOM. The Virtual DOM is a simple JSON representation of the DOM that is kept in memory. If a component is updated, the change is compared to the Virtual DOM. ReactJS determines the smallest changes needed to render the updated view and applies those changes to the DOM. So, for instance, instead of replacing an entire list when the title of one item is changed, only the item itself is updated.
   - **Ease of learning** - Learning React is pretty simple. You can have a simple React application up and running in a matter of minutes. Especially using something like NextJS or Create-React-App, starting a React app is a matter of writing a few components. The React API is relatively small. The React community is one of the largest, which results in a large ecosystem, open-sourced UI components and many great resources to learn from online.
   - **Developer experience** - Part of said ecosystem is a set of tools that enhance the developer experience. [React Developer Tools](https://github.com/facebook/react-devtools) plug into your browser's Developer Tools and allow you to inspect the React components that drive your HTML. It's also possible to manipulate the props and state and see how that affects your component. 
+
+Although there are some new contenders on the block (most notably, VueJS), React still offers enough benefits over its competitors. 
