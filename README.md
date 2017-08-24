@@ -90,13 +90,13 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
 
 #### Jest
 
-<img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="164px" />
+<img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="100px" />
 
 [Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in a shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
 
 #### Enzyme
 
-<img alt="Airbnb Logo" src="https://avatars0.githubusercontent.com/u/698437?v=4&s=400" width="164px" />
+<img alt="Airbnb Logo" src="https://avatars0.githubusercontent.com/u/698437" width="100px" />
 
 [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme is used to test React components. Enzyme makes writing Jest tests fun and easy.
 
