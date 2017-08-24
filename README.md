@@ -1,7 +1,6 @@
 # Wehkamp Front end guide
 
-<img alt="Airbnb Logo" src="
-https://www.wehkamp.nl/service/search-navigation-components/img/logo_wehkamp-2scWN3RNjaEl.png" />
+<img alt="Wehkamp Logo" src="https://www.wehkamp.nl/service/search-navigation-components/img/logo_wehkamp-2scWN3RNjaEl.png" />
 
 Wehkamp is one of the largest consumer-oriented e-commerce websites in The Netherlands. To keep growing we try to leverage the latest technology and the talented people in our company. For new hires, this can be a daunting environment to come into. 
 
@@ -83,24 +82,23 @@ Although there are some new contenders on the block (most notably, VueJS), React
 
 ## Maintainability
 
-Creating a maintainable codebase is **very** important. At Wehkamp we have multiple engineers working across multiple projects. We highly value readability, maintainability and stability of our codebases and there are a few ways to achieve that: Unit testing, End-to-end testing and forcing a consistent coding style.
+Creating a maintainable code base is **very** important. At Wehkamp we have multiple engineers working on multiple projects. We highly value readability, maintainability, and stability of our code bases and there are a few ways to achieve that: Unit testing, End-to-end testing and forcing a consistent coding style.
 
 ### Testing
 
-As mentioned we seperate testing by splitting them into Unit testing & End-to-end testing for that we use a couple of utility tools.
+As mentioned we separate testing by splitting them into Unit testing & End-to-end testing for that we use a couple of utility tools.
 
 #### Jest
 
 <img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="164px" />
 
-[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
+[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in a shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
 
 #### Enzyme
 
-<img alt="Airbnb Logo" src="
-https://avatars0.githubusercontent.com/u/698437?v=4&s=400" width="164px" />
+<img alt="Airbnb Logo" src="https://avatars0.githubusercontent.com/u/698437?v=4&s=400" width="164px" />
 
-[Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme be used to test React components. Enzyme makes writing Jest tests fun and easy.
+[Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme is used to test React components. Enzyme makes writing Jest tests fun and easy.
 
 
 #### Cypress
