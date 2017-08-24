@@ -1,6 +1,6 @@
-# Wehkamp Front end guide
-
 <img alt="Wehkamp Logo" src="https://www.wehkamp.nl/service/search-navigation-components/img/logo_wehkamp-2scWN3RNjaEl.png" />
+
+# Front end guide
 
 Wehkamp is one of the largest consumer-oriented e-commerce websites in The Netherlands. To keep growing we try to leverage the latest technology and the talented people in our company. For new hires, this can be a daunting environment to come into. 
 
@@ -102,6 +102,10 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
 
 
 #### Cypress
+
+<img alt="Enzyme logo" src="https://pbs.twimg.com/profile_images/715181587596505088/WCV1ZBXh_400x400.jpg" width="100px">
+
+[Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic and no dependencies have to be installed prior to using it. It provides real-time command execution, gives you Clear visibility, it's easy to debug and has a simple API.
 
 ### Linting Javascript
 
