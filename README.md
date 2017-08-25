@@ -26,6 +26,7 @@ This study guide is meant for people that don't have (a lot of) experience with 
 			- [Cypress](#cypress)
 				- [Study links](#study-links)
 		- [Linting Javascript](#linting-javascript)
+			- [Study Links](#study-links)
 		- [Linting CSS](#linting-css)
 
 ## Progressive Web Apps
@@ -122,7 +123,17 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
  - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You’ll-Learn) 
 - [Cypress API reference](https://docs.cypress.io/api/introduction/api.html)
 
-
 ### Linting Javascript
+
+<img alt="ESLint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/eslint-logo.svg" width="256px" />
+
+A linter is a tool to statically analyze code and finds problems with them, potentially preventing bugs/runtime errors and at the same time, enforcing a coding style. Time is saved during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. [ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Wehkamp, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) pre-set, that has already been configured with the common good coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript).
+
+For the most part, using ESLint is as simple as tweaking a configuration file in your project folder. There's nothing much to learn about ESLint if you're not writing new rules for it. Just be aware of the errors when they surface and Google it to find out the recommended style.
+
+#### Study Links
+
+- [ESLint Homepage](http://eslint.org/)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 ### Linting CSS
