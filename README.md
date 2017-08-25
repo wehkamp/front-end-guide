@@ -10,21 +10,23 @@ This study guide is meant for people that don't have (a lot of) experience with 
 
 ## Table of Contents
 
-* [Progressive Web Apps](#progressive-web-apps)
-* [JavaScript language](#javascript-language)
-* [User Interface](#user-interface)
-  * [Server-side Rendering](#server-side-rendering)
-* [State Management](#state-management)
-* [Coding with style](#coding-with-style)
-* [Maintainability](#maintainability)
-  * [Testing](#testing)
-  * [Linting JavaScript](#linting-javascript)
-  * [Linting CSS](#linting-css)
-* [Build System](#build-system)
-* [Package Management](#package-management)
-* [Continuous Integration/Deployment](#continuous-integration-deployment)
-* [Hosting](#hosting)
-* [Development](#development)
+- [Front end guide](#front-end-guide)
+	- [Table of Contents](#table-of-contents)
+	- [Progressive Web Apps](#progressive-web-apps)
+		- [Study links](#study-links)
+	- [JavaScript Language](#javascript-language)
+		- [Study links](#study-links)
+	- [User Interface](#user-interface)
+	- [Maintainability](#maintainability)
+		- [Testing](#testing)
+			- [Jest](#jest)
+				- [Study links](#study-links)
+			- [Enzyme](#enzyme)
+				- [Study links](#study-links)
+			- [Cypress](#cypress)
+				- [Study links](#study-links)
+		- [Linting Javascript](#linting-javascript)
+		- [Linting CSS](#linting-css)
 
 ## Progressive Web Apps
 
@@ -108,7 +110,7 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
 [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme is used to test React components. Enzyme makes writing Jest tests fun and easy.
 ##### Study links
 
- - [Enzyme API reference](http://airbnb.io/enzyme/API reference/api/)
+ - [Enzyme API reference](http://airbnb.io/enzyme/docs/api/)
 
 #### Cypress
 
