@@ -13,20 +13,14 @@ This study guide is meant for people that don't have (a lot of) experience with 
 - [Front end guide](#front-end-guide)
 	- [Table of Contents](#table-of-contents)
 	- [Progressive Web Apps](#progressive-web-apps)
-		- [Study links](#study-links)
 	- [JavaScript Language](#javascript-language)
-		- [Study links](#study-links)
 	- [User Interface](#user-interface)
 	- [Maintainability](#maintainability)
 		- [Testing](#testing)
 			- [Jest](#jest)
-				- [Study links](#study-links)
 			- [Enzyme](#enzyme)
-				- [Study links](#study-links)
 			- [Cypress](#cypress)
-				- [Study links](#study-links)
 		- [Linting Javascript](#linting-javascript)
-			- [Study Links](#study-links)
 		- [Linting CSS](#linting-css)
 
 ## Progressive Web Apps
@@ -125,11 +119,34 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
 
 ### Linting Javascript
 
-<img alt="ESLint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/eslint-logo.svg" width="256px" />
+<img alt="ESLint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/eslint-logo.svg" width="80px" />
 
 A linter is a tool to statically analyze code and finds problems with them, potentially preventing bugs/runtime errors and at the same time, enforcing a coding style. Time is saved during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. [ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Wehkamp, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) pre-set, that has already been configured with the common good coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript).
 
 For the most part, using ESLint is as simple as tweaking a configuration file in your project folder. There's nothing much to learn about ESLint if you're not writing new rules for it. Just be aware of the errors when they surface and Google it to find out the recommended style.
+
+Here's an example of `.eslint` file that we use in a couple of repositories.
+
+```
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "mocha": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+
+  // additions to, or overrides of the airbnb rules
+  "rules": {
+    "max-len": ["error", 140],
+    "no-use-before-define": ["error", "nofunc"],
+    "import/no-named-as-default": ["off"],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+  }
+}
+```
 
 #### Study Links
 
