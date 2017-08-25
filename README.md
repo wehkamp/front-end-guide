@@ -90,22 +90,36 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
 
 #### Jest
 
-<img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="100px" />
+<img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="80px" />
 
 [Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in a shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
+
+##### Study links
+
+ - [Jest getting started guide](https://facebook.github.io/jest/docs/en/getting-started.html)
+ - [Jest API reference](https://facebook.github.io/jest/docs/en/api.html)
+
+
 
 #### Enzyme
 
 <img alt="Airbnb Logo" src="https://avatars0.githubusercontent.com/u/698437" width="100px" />
 
 [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme is used to test React components. Enzyme makes writing Jest tests fun and easy.
+##### Study links
 
+ - [Enzyme API reference](http://airbnb.io/enzyme/API reference/api/)
 
 #### Cypress
 
 <img alt="Enzyme logo" src="https://pbs.twimg.com/profile_images/715181587596505088/WCV1ZBXh_400x400.jpg" width="100px">
 
 [Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic and no dependencies have to be installed prior to using it. It provides real-time command execution, gives you Clear visibility, it's easy to debug and has a simple API.
+##### Study links
+
+ - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You’ll-Learn) 
+- [Cypress API reference](https://docs.cypress.io/api/introduction/api.html)
+
 
 ### Linting Javascript
 
