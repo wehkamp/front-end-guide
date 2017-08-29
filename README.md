@@ -20,8 +20,9 @@ This study guide is meant for people that don't have (a lot of) experience with 
 			- [Jest](#jest)
 			- [Enzyme](#enzyme)
 			- [Cypress](#cypress)
-		- [Linting Javascript](#linting-javascript)
-		- [Linting CSS](#linting-css)
+		- [Linting](#linting)
+			- [Javascript](#javascript)
+			- [CSS](#css)
 
 ## Progressive Web Apps
 
@@ -79,51 +80,60 @@ Although there are some new contenders on the block (most notably, VueJS), React
 
 ## Maintainability
 
-Creating a maintainable code base is **very** important. At Wehkamp we have multiple engineers working on multiple projects. We highly value readability, maintainability, and stability of our code bases and there are a few ways to achieve that: Unit testing, End-to-end testing and forcing a consistent coding style.
+Creating a maintainable codebase is **very** important!
+At Wehkamp we have multiple engineers working on various projects. We also have a lot of new people onboarding on a regular basis, and it's a good practice to have them contributing code trough our standard in a couple of weeks. We highly value readability, maintainability, and stability of our codebases and there are a few ways to achieve that: unit testing, end-to-end testing and forcing a consistent coding style.
+
+Besides writing maintainable code, it's good to have a maintainable development workflow as well. At Wehkamp we do use version control, write documentation, work in different environments, have external and internal dependencies and per team have specific workflow enhancements.
+
+- [NEEDS TO BE MADE: Workflow guide](#)
 
 ### Testing
 
-As mentioned we separate testing by splitting them into Unit testing & End-to-end testing for that we use a couple of utility tools.
+As mentioned we separate testing by splitting them into unit testing & end-to-end testing for that we use a couple of utility tools.
 
 #### Jest
 
-<img alt="Jest Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/jest-logo.svg" width="80px" />
+<img alt="Jest Logo" src="./images/jest-logo.svg" width="100px" />
 
-[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can be run in parallel resulting in a shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to manually come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
-
-##### Study links
+[Jest](http://facebook.github.io/jest/) is a testing library by Facebook that aims to make the process of testing pain-free. As with Facebook projects, it provides a great development experience out of the box. Tests can run in parallel resulting in a shorter duration. During watch mode, by default, only the tests for the changed files are run. One particular feature we like is "Snapshot Testing". Jest can save the generated output of your React component and Redux state and save it as serialized files, so you wouldn't have to come up with the expected output yourself. Jest also comes with built-in mocking, assertion and test coverage. One library to rule them all!
 
  - [Jest getting started guide](https://facebook.github.io/jest/docs/en/getting-started.html)
  - [Jest API reference](https://facebook.github.io/jest/docs/en/api.html)
 
 
-
 #### Enzyme
 
-<img alt="Airbnb Logo" src="https://avatars0.githubusercontent.com/u/698437" width="100px" />
+<img alt="Airbnb Logo" src="./images/airbnb-logo.svg" width="100px" />
 
 [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme is used to test React components. Enzyme makes writing Jest tests fun and easy.
-##### Study links
 
  - [Enzyme API reference](http://airbnb.io/enzyme/docs/api/)
 
 #### Cypress
 
-<img alt="Enzyme logo" src="https://pbs.twimg.com/profile_images/715181587596505088/WCV1ZBXh_400x400.jpg" width="100px">
+<img alt="Cypress Logo" src="./images/cypress-io-logo.png" width="100px" />
 
-[Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic and no dependencies have to be installed prior to using it. It provides real-time command execution, gives you Clear visibility, it's easy to debug and has a simple API.
-##### Study links
+[Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic, and no dependencies have to install before using it. It provides real-time command execution, shows your application when testing, it's easy to debug and has a simple API.
 
- - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You’ll-Learn) 
+ - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You???ll-Learn) 
 - [Cypress API reference](https://docs.cypress.io/api/introduction/api.html)
 
-### Linting Javascript
+### Linting
 
-<img alt="ESLint Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/eslint-logo.svg" width="80px" />
+A linter is a tool to analyze code statically and find problems with it. Potentially preventing runtime errors and at the same time, enforcing a coding style. It saves time during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. 
 
-A linter is a tool to statically analyze code and finds problems with them, potentially preventing bugs/runtime errors and at the same time, enforcing a coding style. Time is saved during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. [ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Wehkamp, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) pre-set, that has already been configured with the common good coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript).
+
+#### Javascript
+
+<img alt="ESlint Logo" src="./images/eslint-logo.svg" width="100px" />
+
+[ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Wehkamp, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) pre-set, that has already been configured with the standard coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript).
 
 For the most part, using ESLint is as simple as tweaking a configuration file in your project folder. There's nothing much to learn about ESLint if you're not writing new rules for it. Just be aware of the errors when they surface and Google it to find out the recommended style.
+
+
+- [ESLint Homepage](http://eslint.org/)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 Here's an example of `.eslint` file that we use in a couple of repositories.
 
@@ -148,9 +158,18 @@ Here's an example of `.eslint` file that we use in a couple of repositories.
 }
 ```
 
-#### Study Links
+ESlint allows you to auto fix code by using the `--fix` flag on execution. You could even create a file watcher for it, so it fix your code on save.
+#### CSS
 
-- [ESLint Homepage](http://eslint.org/)
-- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+<img alt="Stylelint Logo" src="./images/stylelint-logo.svg" width="100px" />
 
-### Linting CSS
+For linting SCSS, we use stylelint. Like ESLint, stylelint is designed in a very modular fashion, allowing developers to turn rules on/off and write custom plugins for it. 
+
+Once you have learned ESLint, learning stylelint would be effortless considering their similarities. stylelint is currently being used by large enterprises like [Facebook](https://code.facebook.com/posts/879890885467584/improving-css-quality-at-facebook-and-beyond/), [Github](https://github.com/primer/stylelint-config-primer) and [Wordpress](https://github.com/WordPress-Coding-Standards/stylelint-config-wordpress).
+
+Stylelint even enables you to auto fix code although the feature is not fully matured yet, and is only able to correct a limited number of rules.
+
+- [stylelint Homepage](https://stylelint.io/)
+- [Lint your CSS with stylelint](https://css-tricks.com/stylelint/)
+
+Like ESlint, Stylelint also enables you to auto fix code although the feature is not fully matured yet, and is only able to correct a limited number of rules.
