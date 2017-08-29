@@ -80,8 +80,8 @@ Although there are some new contenders on the block (most notably, VueJS), React
 
 ## Maintainability
 
-Creating a maintainable code base is **very** important!
-At Wehkamp we have multiple engineers working on various projects. We also have a lot of new people onboarding on a monthly basis, and it's a good practice to have them contributing code trough our standard in a couple of weeks. We highly value readability, maintainability, and stability of our code bases and there are a few ways to achieve that: unit testing, end-to-end testing and forcing a consistent coding style.
+Creating a maintainable codebase is **very** important!
+At Wehkamp we have multiple engineers working on various projects. We also have a lot of new people onboarding on a regular basis, and it's a good practice to have them contributing code trough our standard in a couple of weeks. We highly value readability, maintainability, and stability of our codebases and there are a few ways to achieve that: unit testing, end-to-end testing and forcing a consistent coding style.
 
 Besides writing maintainable code, it's good to have a maintainable development workflow as well. At Wehkamp we do use version control, write documentation, work in different environments, have external and internal dependencies and per team have specific workflow enhancements.
 
