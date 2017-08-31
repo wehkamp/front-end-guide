@@ -2,7 +2,7 @@
 
 # Front end guide
 
-Wehkamp is one of the largest consumer-oriented e-commerce websites in The Netherlands. To keep growing we try to leverage the latest technology and the talented people in our company. For new hires, this can be a daunting environment to come into. 
+Wehkamp is one of the largest consumer-oriented e-commerce websites in The Netherlands. To keep growing we try to leverage the latest technology and the talented people in our company. For new hires, this can be a daunting environment to come into.
 
 This study guide is based on the [Grab study guide](https://github.com/grab/front-end-guide) and is meant to explain the choices that were made with regards to front end technology and where to find good resources to learn more about each technology.
 
@@ -27,30 +27,75 @@ This study guide is meant for people that don't have (a lot of) experience with 
 
 Some time ago, Google coined the term *Progressive Web App* (PWA), to describe a web app that would provide the same user experience as a native app on a mobile device. A PWA is not so much a specific tool, but a compilation of various best practices and technologies that should lead to a "native" feel in a web app.
 
+> “A Progressive Web App uses modern web capabilities to deliver an app-like user experience.”  - [Progressive web apps](https://developers.google.com/web/progressive-web-apps/?hl=en)
+
+In order to create an (native) app-like experience on the web the app needs to be:
+
+- **Reliable** - Load instantly and never show the downasaur, even in uncertain network conditions.
+- **Fast** - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
+- **Engaging** - Feel like a natural app on the device, with an immersive user experience.
+
+This new level of quality allows Progressive Web Apps to earn a place on the user's home screen.
+
+
 The benefits:
- * A responsive website, with a low Time To Interactive and fast navigation between pages. The use of a Service Worker allows for intelligent caching of data and assets. 
+ * A responsive website, with a low Time To Interactive and fast navigation between pages. The use of a Service Worker allows for intelligent caching of data and assets.
  * A "native"-like experience with fluent animations and low load times.
  * The option to implement more advanced APIs such as Push Notifications
  * Provides the user with the option to "install" the app on his phone or tablet and use it as if it was a native app.
- 
- The downsides:
+
+The downsides:
   * Not all browsers support service workers, which are a key technology in PWAs. Most notably Safari on iOS (and macOS) lacks support. However, work has started to implement service workers for Safari, at least in macOS. Also, Safari does support many other features of PWAs.
-  * People are not yet used to installable web apps. They might prefer a native app, because of familiarity. 
+  * People are not yet used to installable web apps. They might prefer a native app, because of familiarity.
   * PWAs are still in the early adopter stage, there are not many tools and support libraries that make the development of a PWA easier.
-  
+
 Even though PWAs are still in their infancy, we think that an e-commerce site like ours will benefit greatly from the speed improvements and native feel that it's worth pursuing a PWA solution. For new engineers, it might be a challenge, because there are many things that are a part of building a PWA that are technically advanced (like code splitting, tree shaking, etc.). However, PWAs are currently hot, so many of the front end leaders are blogging about this and building tools to make creating a PWA easier.
+
+## Features of a progressive web app
+- **Progressive** - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
+- **Responsive** - Fit any form factor: desktop, mobile, tablet, or forms yet to emerge.
+- **Connectivity independent** - Service workers allow work offline, or on low quality networks.
+- **App-like** - Feel like an app to the user with app-style interactions and navigation.
+- **Fresh** - Always up-to-date thanks to the service worker update process.
+- **Safe** - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
+- **Discoverable** - Are identifiable as “applications” thanks to W3C manifests[6] and service worker registration scope allowing search engines to find them.
+- **Re-engageable** - Make re-engagement easy through features like push notifications.
+- **Installable** - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
+- **Linkable** - Easily shared via a URL and do not require complex installation.
+
+## Enabling technologies
+
+### Manifest
+The web app [manifest](https://www.w3.org/TR/appmanifest/) is a W3C specification defining a JSON-based manifest to provide developers a centralized place to put metadata associated with a web application including:
+
+- The name of the web application
+- Links to the web app icons or image objects
+- The preferred URL to launch or open the web app
+- The web app configuration data for a number of characteristics
+- Declaration for default orientation of the web app
+- Enables to set the display mode e.g. full screen
+
+By setting and manipulating the metadata for the web manifest file, developers enable user agents to create seamless native-like mobile experiences through the Progressive Web App.
+
+### Service Worker
+[Service worker](https://w3c.github.io/ServiceWorker/) is the key technology powering Progressive Web Apps. They are the foundation for features as periodic background syncing, offline-caching, push notifications and so on.
+
+Technically, Service Workers provide a scriptable network proxy in the web browser to manage the web/HTTP requests programmatically. The Service Workers lie between the network and device to supplement the content. They are capable of using the cache mechanisms efficiently and allow error-free behavior during offline periods.
 
 ### Study links
  - [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
  - [Build your first PWA](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
  - [Udacity PWA Course](https://classroom.udacity.com/courses/ud811)
  - [Google PWA Training](https://developers.google.com/web/ilt/pwa/)
+ - [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+ - [Service workers explained](https://github.com/w3c/ServiceWorker/blob/master/explainer.md)
+ - [Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 
 ## JavaScript Language
 
-Before diving into frameworks to build the UI, it's a good idea to get at least a solid grasp of the current state of JavaScript. The standardized version of JavaScript is called ECMAScript. 
+Before diving into frameworks to build the UI, it's a good idea to get at least a solid grasp of the current state of JavaScript. The standardized version of JavaScript is called ECMAScript.
 
-In 2015, JavaScript (the language) got a major update through ECMAScript 2015 (a.k.a. ES6). The standards body that provides these updates, TC39, is now creating smaller improvements that they release every year. So, the latest version is ES2016, but the plans for ES2017 are already open and some browser vendors are experimenting with implementations for that, even though they haven't implemented everything of ES2015. 
+In 2015, JavaScript (the language) got a major update through ECMAScript 2015 (a.k.a. ES6). The standards body that provides these updates, TC39, is now creating smaller improvements that they release every year. So, the latest version is ES2016, but the plans for ES2017 are already open and some browser vendors are experimenting with implementations for that, even though they haven't implemented everything of ES2015.
 
 Because these newer iterations of the language provide many benefits to us as developers, we use [Babel](https://babeljs.io) to transpile our code from the latest ECMAScript standards to JavaScript that the browsers can understand. We use [babel-preset-env](https://github.com/babel/babel-preset-env) to make sure that Babel produces code that the most-used browsers can understand.
 
@@ -73,9 +118,9 @@ The features of ReactJS are:
   - **Maintainable** - Writing small components encourages reusability. By defining the `propTypes`, components are self-documenting as the reader can clearly see what types of input the component needs. And because your component is a self-contained unit, your view and logic for that component should not be affected by other components, nor affect other components. This makes it easy to shift components around during large-scale refactorings, as long as the same `props` are supplied to the component.
   - **High performance** - Changes in `props` and `state` are not directly translated to the DOM but are first applied to the so-called Virtual DOM. The Virtual DOM is a simple JSON representation of the DOM that is kept in memory. If a component is updated, the change is compared to the Virtual DOM. ReactJS determines the smallest changes needed to render the updated view and applies those changes to the DOM. So, for instance, instead of replacing an entire list when the title of one item is changed, only the item itself is updated.
   - **Ease of learning** - Learning React is pretty simple. You can have a simple React application up and running in a matter of minutes. Especially using something like NextJS or Create-React-App, starting a React app is a matter of writing a few components. The React API is relatively small. The React community is one of the largest, which results in a large ecosystem, open-sourced UI components, and many great resources to learn from online.
-  - **Developer experience** - Part of their ecosystem is a set of tools that enhance the developer experience. [React Developer Tools](https://github.com/facebook/react-devtools) plug into your browser's Developer Tools and allow you to inspect the React components that drive your HTML. It's also possible to manipulate the props and state and see how that affects your component. 
+  - **Developer experience** - Part of their ecosystem is a set of tools that enhance the developer experience. [React Developer Tools](https://github.com/facebook/react-devtools) plug into your browser's Developer Tools and allow you to inspect the React components that drive your HTML. It's also possible to manipulate the props and state and see how that affects your component.
 
-Although there are some new contenders on the block (most notably, VueJS), React still offers enough benefits over its competitors. 
+Although there are some new contenders on the block (most notably, VueJS), React still offers enough benefits over its competitors.
 
 ## Maintainability
 
@@ -114,7 +159,7 @@ As mentioned we separate testing by splitting them into Unit testing & End-to-en
 [Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic and no dependencies have to be installed prior to using it. It provides real-time command execution, gives you Clear visibility, it's easy to debug and has a simple API.
 ##### Study links
 
- - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You’ll-Learn) 
+ - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You’ll-Learn)
 - [Cypress API reference](https://docs.cypress.io/api/introduction/api.html)
 
 ### Linting Javascript
