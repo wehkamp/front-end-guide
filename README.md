@@ -30,14 +30,13 @@ Some time ago, Google coined the term *Progressive Web App* (PWA), to describe a
 
 > “A Progressive Web App uses modern web capabilities to deliver an app-like user experience.”  - [Progressive web apps](https://developers.google.com/web/progressive-web-apps/?hl=en)
 
-In order to create an (native) app-like experience on the web the app needs to be:
+To create a (native) app-like experience on the web the app needs to be:
 
-- **Reliable** - Load instantly and never show the downasaur, even in uncertain network conditions.
+- **Reliable** - Load instantly and never show the dinosaur, even in uncertain network conditions.
 - **Fast** - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
-- **Engaging** - Feel like a natural app on the device, with an immersive user experience.
+- **Engaging** - Feel like a native app on the device, with an immersive user experience.
 
 This new level of quality allows Progressive Web Apps to earn a place on the user's home screen.
-
 
 The benefits:
  * A responsive website, with a low Time To Interactive and fast navigation between pages. The use of a Service Worker allows for intelligent caching of data and assets.
@@ -55,14 +54,14 @@ Even though PWAs are still in their infancy, we think that an e-commerce site li
 ## Features of a progressive web app
 - **Progressive** - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
 - **Responsive** - Fit any form factor: desktop, mobile, tablet, or forms yet to emerge.
-- **Connectivity independent** - Service workers allow work offline, or on low quality networks.
+- **Connectivity independent** - Service workers allow work offline, or on low-quality networks.
 - **App-like** - Feel like an app to the user with app-style interactions and navigation.
 - **Fresh** - Always up-to-date thanks to the service worker update process.
 - **Safe** - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
 - **Discoverable** - Are identifiable as “applications” thanks to W3C manifests[6] and service worker registration scope allowing search engines to find them.
 - **Re-engageable** - Make re-engagement easy through features like push notifications.
 - **Installable** - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
-- **Linkable** - Easily shared via a URL and do not require complex installation.
+- **Linkable** - Easily shared via a URL and does not require complex installation.
 
 ## Enabling technologies
 
