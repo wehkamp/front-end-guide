@@ -216,8 +216,6 @@ Stylelint even enables you to auto fix code although the feature is not fully ma
 - [stylelint Homepage](https://stylelint.io/)
 - [Lint your CSS with stylelint](https://css-tricks.com/stylelint/)
 
-<<<<<<< HEAD
+
 ### Linting CSS
-=======
 Like ESlint, Stylelint also enables you to auto fix code although the feature is not fully matured yet, and is only able to correct a limited number of rules.
->>>>>>> master
