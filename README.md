@@ -23,6 +23,7 @@ This study guide is meant for people that don't have (a lot of) experience with 
 		- [Linting](#linting)
 			- [Javascript](#javascript)
 			- [CSS](#css)
+	- [Package Management](#package-management)
 
 ## Progressive Web Apps
 
@@ -159,8 +160,8 @@ Here's an example of `.eslint` file that we use in a couple of repositories.
 ```
 
 ESlint allows you to auto fix code by using the `--fix` flag on execution. You could even create a file watcher for it, so it fix your code on save.
-#### CSS
 
+#### CSS
 <img alt="Stylelint Logo" src="./images/stylelint-logo.svg" width="100px" />
 
 For linting SCSS, we use stylelint. Like ESLint, stylelint is designed in a very modular fashion, allowing developers to turn rules on/off and write custom plugins for it. 
@@ -173,3 +174,16 @@ Stylelint even enables you to auto fix code although the feature is not fully ma
 - [Lint your CSS with stylelint](https://css-tricks.com/stylelint/)
 
 Like ESlint, Stylelint also enables you to auto fix code although the feature is not fully matured yet, and is only able to correct a limited number of rules.
+
+## Package Management
+<img alt="NPM Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/640px-Npm-logo.svg.png" width="100px"/>
+
+`npm` is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called `npm`, and an online database of public and paid-for private packages, called the `npm` registry. The registry is accessed via the client, and the available packages can be browsed and searched via the `npm` website. The package manager and the registry are managed by npm, Inc.
+
+If you take a peek into your `node_modules` directory, you will be shocked by the number of directories that are contained in it. Each babel plugin, lodash function, is a package on its own. When you have multiple projects, these packages are duplicated across each project and they are largely similar. 
+
+In the old days each time you run `npm install` in a new project, these packages are downloaded over and over again even though they already exist in some other project on your computer. At first, NPM had problems with non-determinism but as of version 5 the installed packages are handled via a `package.lock` file, which ensures that every install results in the exact same file structure in `node_modules` across all machines. 
+
+The most common `npm` commands can be found [here](https://docs.npmjs.com/). `npm` is extensible and one of our extensions is `npm-check` which makes updating dependencies a breeze especially when the modern JavaScript project requires so many dependencies these days. [Do check it out!](https://github.com/dylang/npm-check)
+
+- [npm Homepage](https://docs.npmjs.com/)
