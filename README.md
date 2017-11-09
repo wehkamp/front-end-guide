@@ -1,16 +1,16 @@
 <img alt="Wehkamp Logo" src="https://www.wehkamp.nl/service/search-navigation-components/img/logo_wehkamp-2scWN3RNjaEl.png" />
 
-# Front end guide
+# Front-end guide
 
 Wehkamp is one of the largest consumer-oriented e-commerce websites in The Netherlands. To keep growing we try to leverage the latest technology and the talented people in our company. For new hires, this can be a daunting environment to come into. 
 
-This study guide is based on the [Grab study guide](https://github.com/grab/front-end-guide) and is meant to explain the choices that were made with regards to front end technology and where to find good resources to learn more about each technology.
+This study guide is based on the [Grab study guide](https://github.com/grab/front-end-guide) and is meant to explain the choices that were made with regards to front-end technology and where to find good resources to learn more about each technology.
 
-This study guide is meant for people that don't have (a lot of) experience with these technologies. If you have been keeping up to date with the developments in front end, this guide won't be of much benefit to you.
+This study guide is meant for people that don't have (a lot of) experience with these technologies. If you have been keeping up to date with the developments in front-end, this guide won't be of much benefit to you.
 
 ## Table of Contents
 
-- [Front end guide](#front-end-guide)
+- [front-end guide](#front-end-guide)
 	- [Table of Contents](#table-of-contents)
 	- [Progressive Web Apps](#progressive-web-apps)
 	- [JavaScript Language](#javascript-language)
@@ -45,7 +45,7 @@ The benefits:
   * People are not yet used to installable web apps. They might prefer a native app, because of familiarity. 
   * PWAs are still in the early adopter stage, there are not many tools and support libraries that make the development of a PWA easier.
   
-Even though PWAs are still in their infancy, we think that an e-commerce site like ours will benefit greatly from the speed improvements and native feel that it's worth pursuing a PWA solution. For new engineers, it might be a challenge, because there are many things that are a part of building a PWA that are technically advanced (like code splitting, tree shaking, etc.). However, PWAs are currently hot, so many of the front end leaders are blogging about this and building tools to make creating a PWA easier.
+Even though PWAs are still in their infancy, we think that an e-commerce site like ours will benefit greatly from the speed improvements and native feel that it's worth pursuing a PWA solution. For new engineers, it might be a challenge, because there are many things that are a part of building a PWA that are technically advanced (like code splitting, tree shaking, etc.). However, PWAs are currently hot, so many of the front-end leaders are blogging about this and building tools to make creating a PWA easier.
 
 ### Study links
  - [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
@@ -71,7 +71,7 @@ Take a few days to make sure you are up to speed with the features of ES5.1 and 
 
 ### Other Study Plans
  - [State of the JavaScript Landscape: A Map for Newcomers](http://www.infoq.com/articles/state-of-javascript-2016)
-- [The Hitchhiker's guide to the modern front end development workflow](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
+- [The Hitchhiker's guide to the modern front-end development workflow](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
 - [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp)
 - [Roadmap to becoming a web developer in 2017](https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap)
 - [Modern JavaScript for Ancient Web Developers](https://trackchanges.postlight.com/modern-javascript-for-ancient-web-developers-58e7cae050f9)
@@ -81,8 +81,8 @@ Take a few days to make sure you are up to speed with the features of ES5.1 and 
 
 ## User Interface
 
-ReactJS is one of the more advanced frameworks/libraries that have emerged over the past few years. Since its release in 2013, it has convinced a lot of front end devs to start using it and building tools on top of it, such as [Next.JS](https://github.com/zeit/next.js/) and [Create-React-App](https://github.com/facebookincubator/create-react-app). ReactJS is not a framework that provides everything out of the box, but it only handles the view layer of your app. The developer can create their own routing and data management solutions or include other modules to handle this.
-For years, front end developers were encouraged to write JavaScript, HTML, and CSS separately. ReactJS challenged this by using JSX, a HTML-like syntax that could be written directly into JavaScript files. Through a transpiler, this would be converted to regular JavaScript syntax. Later, other developers added CSS to the mix, with solutions like [glamorous](https://github.com/paypal/glamorous) or [styled-components](https://www.styled-components.com/).
+ReactJS is one of the more advanced frameworks/libraries that have emerged over the past few years. Since its release in 2013, it has convinced a lot of front-end devs to start using it and building tools on top of it, such as [Next.JS](https://github.com/zeit/next.js/) and [Create-React-App](https://github.com/facebookincubator/create-react-app). ReactJS is not a framework that provides everything out of the box, but it only handles the view layer of your app. The developer can create their own routing and data management solutions or include other modules to handle this.
+For years, front-end developers were encouraged to write JavaScript, HTML, and CSS separately. ReactJS challenged this by using JSX, an HTML-like syntax that could be written directly into JavaScript files. Through a transpiler, this would be converted to regular JavaScript syntax. Later, other developers added CSS to the mix, with solutions like [glamorous](https://github.com/paypal/glamorous) or [styled-components](https://www.styled-components.com/).
 
 The features of ReactJS are:
  - **Declarative** - Through JSX, you describe what your component should render, depending on the state and incoming data. In the old days, devs would have to use jQuery to manipulate the DOM to get from one app state to the next. In React, you just change the incoming data or the internal state of the component and the view will be updated automatically, according to how it was specified. JSX also makes it easy to see what the component will render.
@@ -97,7 +97,7 @@ Although there are some new contenders on the block (most notably, VueJS), React
 ## Maintainability
 
 Creating a maintainable codebase is **very** important!
-At Wehkamp we have multiple engineers working on various projects. We also have a lot of new people onboarding on a regular basis, and it's a good practice to have them contributing code trough our standard in a couple of weeks. We highly value readability, maintainability, and stability of our codebases and there are a few ways to achieve that: unit testing, end-to-end testing and forcing a consistent coding style.
+At Wehkamp we have multiple engineers working on various projects. We also have a lot of new people onboarding on a regular basis, and it's a good practice to have them contributing code through our standard in a couple of weeks. We highly value readability, maintainability, and stability of our codebases and there are a few ways to achieve that: unit testing, end-to-end testing and forcing a consistent coding style.
 
 Besides writing maintainable code, it's good to have a maintainable development workflow as well. At Wehkamp we do use version control, write documentation, work in different environments, have external and internal dependencies and per team have specific workflow enhancements.
 
@@ -127,7 +127,7 @@ As mentioned we separate testing by splitting them into unit testing, integratio
 
 <img alt="Cypress Logo" src="./images/cypress-io-logo.png" width="100" />
 
-[Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic, and no dependencies have to install before using it. It provides real-time command execution, shows your application when testing, it's easy to debug and has a simple API.
+[Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so-called end-to-end testing) tests in your browser. It's language agnostic, and no dependencies have to install before using it. It provides real-time command execution, shows your application when testing, it's easy to debug and has a simple API.
 
  - [Cypress getting started guide](https://docs.cypress.io/guides/getting-started/why-cypress.html#What-You???ll-Learn) 
 - [Cypress API reference](https://docs.cypress.io/api/introduction/api.html)
@@ -196,7 +196,7 @@ Like ESlint, Stylelint also enables you to auto fix code although the feature is
 
 If you take a peek into your `node_modules` directory, you will be shocked by the number of directories that are contained in it. Each babel plugin, lodash function, is a package on its own. When you have multiple projects, these packages are duplicated across each project and they are largely similar. 
 
-In the old days each time you run `npm install` in a new project, these packages are downloaded over and over again even though they already exist in some other project on your computer. At first, NPM had problems with non-determinism but as of version 5 the installed packages are handled via a `package.lock` file, which ensures that every install results in the exact same file structure in `node_modules` across all machines. 
+In the old days each time you run `npm install` in a new project, these packages are downloaded over and over again even though they already exist in some other project on your computer. At first, NPM had problems with non-determinism but as of version 5, the installed packages are handled via a `package.lock` file, which ensures that every install results in the exact same file structure in `node_modules` across all machines. 
 
 The most common `npm` commands can be found [here](https://docs.npmjs.com/). `npm` is extensible and one of our extensions is `npm-check` which makes updating dependencies a breeze especially when the modern JavaScript project requires so many dependencies these days. [Do check it out!](https://github.com/dylang/npm-check)
 
@@ -208,7 +208,7 @@ The most common `npm` commands can be found [here](https://docs.npmjs.com/). `np
 
 Another tool for enforcing consistent coding style for JavaScript and CSS is [Prettier](https://github.com/prettier/prettier).
 
-In most cases, it is recommended to setup Prettier on top of ESLint and stylelint and integrate it into the workflow. This allows the code to be formatted into consistent style automatically via commit hooks, so that developers do not need to spend time formatting the coding style manually.
+In most cases, it is recommended to setup Prettier on top of ESLint and stylelint and integrate it into the workflow. This allows the code to be formatted into consistent style automatically via commit hooks so that developers do not need to spend time formatting the coding style manually.
 
 Note that Prettier only enforces coding style, but does not check for logic errors in the code. Hence it is not a replacement for linters.
 
@@ -223,7 +223,7 @@ Note that Prettier only enforces coding style, but does not check for logic erro
 
 <img alt="webpack Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/webpack-logo.svg" width="100" />
 
-This part will be kept short as setting up webpack can be a tedious process and might be a turn-off to developers who are already overwhelmed by the barrage of new things they have to learn for front end development. In a nutshell, [webpack](https://webpack.js.org/) is a module bundler that compiles a front end project and its dependencies into a final bundle to be served to users. Usually, projects will already have the webpack configuration set up and developers rarely have to change it. Having an understanding of webpack is still a good to have in the long run. It is due to webpack that features like hot reloading and CSS modules are made possible.
+This part will be kept short as setting up webpack can be a tedious process and might be a turn-off to developers who are already overwhelmed by the barrage of new things they have to learn for front-end development. In a nutshell, [webpack](https://webpack.js.org/) is a module bundler that compiles a front-end project and its dependencies into a final bundle to be served to users. Usually, projects will already have the webpack configuration set up and developers rarely have to change it. Having an understanding of webpack is still a good to have in the long run. It is due to webpack that features like hot reloading and CSS modules are made possible.
 
 We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/) by SurviveJS to be the best resource on learning webpack. It is a good complement to the official documentation and we recommend following the walkthrough first and referring to the documentation later when the need for further customization arises.
 
@@ -254,7 +254,7 @@ By integrating regularly, you can detect errors quickly, and locate them more ea
 
 We use [Jenkins CD](https://jenkins.io/) for our continuous delivery (CD) pipeline.  
 
-Continuous Delivery can help large organizations become as lean, agile and innovative as startups. Through reliable, low-risk releases, Continuous Delivery makes it possible to continuously adapt software in line with user feedback, shifts in the market and changes to business strategy. Test, support, development and operations work together as one delivery team to automate and streamline the build-test-release process.
+Continuous Delivery can help large organizations become as lean, agile and innovative as startups. Through reliable, low-risk releases, Continuous Delivery makes it possible to continuously adapt software in line with user feedback, shifts in the market and changes to business strategy. Test, support, development, and operations work together as one delivery team to automate and streamline the build-test-release process.
 
 Continuous Delivery is the natural extension of Continuous Integration, an approach in which teams ensure that every change to the system is releasable, and release any version with the push of a button. Continuous Delivery aims to make releases boring, so that we can deliver frequently and get quick feedback on what users care about.
 
