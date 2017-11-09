@@ -13,17 +13,22 @@ This study guide is meant for people that don't have (a lot of) experience with 
 - [Front end guide](#front-end-guide)
 	- [Table of Contents](#table-of-contents)
 	- [Progressive Web Apps](#progressive-web-apps)
-	- [JavaScript Language](#JavaScript-language)
+	- [JavaScript Language](#javascript-language)
 	- [User Interface](#user-interface)
 	- [Maintainability](#maintainability)
-		- [Testing](#testing)
-			- [Jest](#jest)
-			- [Enzyme](#enzyme)
-			- [Cypress](#cypress)
-		- [Linting](#linting)
-			- [JavaScript](#JavaScript)
-			- [CSS](#css)
+	- [Testing your code](#testing-your-code)
+		- [Jest](#jest)
+		- [Enzyme](#enzyme)
+		- [Cypress](#cypress)
+	- [Linting](#linting)
+		- [Linting JavaScript](#linting-javascript)
+		- [Linting CSS](#linting-css)
 	- [Package Management](#package-management)
+	- [Formatting Code](#formatting-code)
+	- [Build System](#build-system)
+	- [Continuous Integration](#continuous-integration)
+	- [Continuous Delivery](#continuous-delivery)
+
 
 ## Progressive Web Apps
 
@@ -64,6 +69,16 @@ Take a few days to make sure you are up to speed with the features of ES5.1 and 
  - [Learn ES2015 on Babel](https://babeljs.io/learn-es2015/)
  - [Exploring ES6](http://exploringjs.com/es6/)
 
+### Other Study Plans
+ - [State of the JavaScript Landscape: A Map for Newcomers](http://www.infoq.com/articles/state-of-javascript-2016)
+- [The Hitchhiker's guide to the modern front end development workflow](http://marcobotto.com/the-hitchhikers-guide-to-the-modern-front-end-development-workflow/)
+- [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.tmy8gzgvp)
+- [Roadmap to becoming a web developer in 2017](https://github.com/kamranahmedse/developer-roadmap#-frontend-roadmap)
+- [Modern JavaScript for Ancient Web Developers](https://trackchanges.postlight.com/modern-javascript-for-ancient-web-developers-58e7cae050f9)
+- [A Study Plan To Cure JavaScript Fatigue](https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.c0wnrrcwd)
+- [JS Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
+- [A Beginner’s JavaScript Study Plan](https://medium.freecodecamp.com/a-beginners-javascript-study-plan-27f1d698ea5e#.bgf49xno2)
+
 ## User Interface
 
 ReactJS is one of the more advanced frameworks/libraries that have emerged over the past few years. Since its release in 2013, it has convinced a lot of front end devs to start using it and building tools on top of it, such as [Next.JS](https://github.com/zeit/next.js/) and [Create-React-App](https://github.com/facebookincubator/create-react-app). ReactJS is not a framework that provides everything out of the box, but it only handles the view layer of your app. The developer can create their own routing and data management solutions or include other modules to handle this.
@@ -90,7 +105,7 @@ Besides writing maintainable code, it's good to have a maintainable development 
 
 As mentioned we separate testing by splitting them into unit testing, integration testing & end-to-end testing for that we use a couple of utility tools.
 
-## Jest
+### Jest
 
 <img alt="Jest Logo" src="./images/jest-logo.svg" width="90px" />
 
@@ -100,17 +115,17 @@ As mentioned we separate testing by splitting them into unit testing, integratio
  - [Jest API reference](https://facebook.github.io/jest/docs/en/api.html)
 
 
-## Enzyme
+### Enzyme
 
-<img alt="Airbnb Logo" src="./images/airbnb-logo.svg" width="100px" />
+<img alt="Airbnb Logo" src="./images/airbnb-logo.svg" width="100" />
 
 [Enzyme](http://airbnb.io/enzyme/) by Airbnb makes it easier to generate, assert, manipulate and traverse your React components' output with a jQuery-like API. It is recommended that Enzyme is used to test React components. Enzyme makes writing Jest tests fun and easy.
 
  - [Enzyme API reference](http://airbnb.io/enzyme/docs/api/)
 
-## Cypress
+### Cypress
 
-<img alt="Cypress Logo" src="./images/cypress-io-logo.png" width="100px" />
+<img alt="Cypress Logo" src="./images/cypress-io-logo.png" width="100" />
 
 [Cypress](https://www.cypress.io/) is a test engine that runs unit and integration (so called end-to-end testing) tests in your browser. It's language agnostic, and no dependencies have to install before using it. It provides real-time command execution, shows your application when testing, it's easy to debug and has a simple API.
 
@@ -121,9 +136,9 @@ As mentioned we separate testing by splitting them into unit testing, integratio
 
 A linter is a tool to analyze code statically and find problems with it. Potentially preventing runtime errors and at the same time, enforcing a coding style. It saves time during pull request reviews when reviewers do not have to leave nitpicky comments on coding style. 
 
-## Linting JavaScript
+### Linting JavaScript
 
-<img alt="ESlint Logo" src="./images/eslint-logo.svg" width="100px" />
+<img alt="ESlint Logo" src="./images/eslint-logo.svg" width="100" />
 
 [ESLint](http://eslint.org/) is a tool for linting JavaScript code that is highly extensible and customizable. Teams can write their own lint rules to enforce their custom styles. At Wehkamp, we use Airbnb's [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) pre-set, that has already been configured with the standard coding style in the [Airbnb JavaScript style guide](https://github.com/airbnb/JavaScript).
 
@@ -158,9 +173,9 @@ Here's an example of `.eslint` file that we use in a couple of repositories.
 
 ESlint allows you to auto fix code by using the `--fix` flag on execution. You could even create a file watcher for it, so it fix your code on save.
 
-## Linting CSS
+### Linting CSS
 
-<img alt="Stylelint Logo" src="./images/stylelint-logo.svg" width="100px" />
+<img alt="Stylelint Logo" src="./images/stylelint-logo.svg" width="100" />
 
 For linting SCSS, we use stylelint. Like ESLint, stylelint is designed in a very modular fashion, allowing developers to turn rules on/off and write custom plugins for it. 
 
@@ -175,7 +190,7 @@ Like ESlint, Stylelint also enables you to auto fix code although the feature is
 
 ## Package Management
 
-<img alt="NPM Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/640px-Npm-logo.svg.png" width="100px"/>
+<img alt="NPM Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/640px-Npm-logo.svg.png" width="100"/>
 
 `npm` is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called `npm`, and an online database of public and paid-for private packages, called the `npm` registry. The registry is accessed via the client, and the available packages can be browsed and searched via the `npm` website. The package manager and the registry are managed by npm, Inc.
 
@@ -186,3 +201,69 @@ In the old days each time you run `npm install` in a new project, these packages
 The most common `npm` commands can be found [here](https://docs.npmjs.com/). `npm` is extensible and one of our extensions is `npm-check` which makes updating dependencies a breeze especially when the modern JavaScript project requires so many dependencies these days. [Do check it out!](https://github.com/dylang/npm-check)
 
 - [npm Homepage](https://docs.npmjs.com/)
+
+## Formatting Code
+
+<img alt="Prettier Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/prettier-logo.png" width="100" />
+
+Another tool for enforcing consistent coding style for JavaScript and CSS is [Prettier](https://github.com/prettier/prettier).
+
+In most cases, it is recommended to setup Prettier on top of ESLint and stylelint and integrate it into the workflow. This allows the code to be formatted into consistent style automatically via commit hooks, so that developers do not need to spend time formatting the coding style manually.
+
+Note that Prettier only enforces coding style, but does not check for logic errors in the code. Hence it is not a replacement for linters.
+
+#### Study Links
+
+- [Prettier Homepage](https://prettier.io/)
+- [Prettier GitHub repo](https://github.com/prettier/prettier)
+- [Comparison between tools that allow you to use ESLint and Prettier together](https://gist.github.com/yangshun/318102f525ec68033bf37ac4a010eb0c)
+
+
+## Build System - webpack
+
+<img alt="webpack Logo" src="https://cdn.rawgit.com/grab/front-end-guide/master/images/webpack-logo.svg" width="100" />
+
+This part will be kept short as setting up webpack can be a tedious process and might be a turn-off to developers who are already overwhelmed by the barrage of new things they have to learn for front end development. In a nutshell, [webpack](https://webpack.js.org/) is a module bundler that compiles a front end project and its dependencies into a final bundle to be served to users. Usually, projects will already have the webpack configuration set up and developers rarely have to change it. Having an understanding of webpack is still a good to have in the long run. It is due to webpack that features like hot reloading and CSS modules are made possible.
+
+We have found the [webpack walkthrough](https://survivejs.com/webpack/foreword/) by SurviveJS to be the best resource on learning webpack. It is a good complement to the official documentation and we recommend following the walkthrough first and referring to the documentation later when the need for further customization arises.
+
+#### Study Links
+
+- [webpack Homepage](https://webpack.js.org/)
+- [SurviveJS - Webpack: From apprentice to master](https://survivejs.com/webpack/foreword/)
+
+## Continuous Integration
+
+We use [Jenkins CI](https://jenkins.io/) for our continuous integration (CI) pipeline. Continuous Integration (CI) is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early. 
+
+By integrating regularly, you can detect errors quickly, and locate them more easily.
+
+- Run linting for the project.
+- Run unit tests for the project.
+- If the tests pass:
+  - Test coverage generated by Jest is uploaded to [Codecov](https://codecov.io/)
+
+#### Study Links
+
+- [Jenkins Homepage](https://jenkins.io/)
+- [Codecov Homepage](https://codecov.io/)
+- [ToughtWorks](https://www.thoughtworks.com/continuous-integration)
+
+
+## Continuous Delivery
+
+We use [Jenkins CD](https://jenkins.io/) for our continuous delivery (CD) pipeline.  
+
+Continuous Delivery can help large organizations become as lean, agile and innovative as startups. Through reliable, low-risk releases, Continuous Delivery makes it possible to continuously adapt software in line with user feedback, shifts in the market and changes to business strategy. Test, support, development and operations work together as one delivery team to automate and streamline the build-test-release process.
+
+Continuous Delivery is the natural extension of Continuous Integration, an approach in which teams ensure that every change to the system is releasable, and release any version with the push of a button. Continuous Delivery aims to make releases boring, so that we can deliver frequently and get quick feedback on what users care about.
+
+#### Study Links
+
+- [Jenkins Homepage](https://jenkins.io/)
+- [Codecov Homepage](https://codecov.io/)
+- [ToughtWorks](https://www.thoughtworks.com/continuous-delivery)
+
+## Footnotes
+
+If certain things are still unclear, please do *NOT* hesitate and ask around, we are all willing to help.
