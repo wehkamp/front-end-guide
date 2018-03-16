@@ -94,6 +94,9 @@ The features of ReactJS are:
 
 Although there are some new contenders on the block (most notably, VueJS), React still offers enough benefits over its competitors. 
 
+### Study links
+ - [Comprehensive guide to React](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
+
 ## Maintainability
 
 Creating a maintainable codebase is **very** important!
