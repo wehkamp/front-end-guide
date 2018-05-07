@@ -1,4 +1,4 @@
-<img alt="Wehkamp Logo" src="https://www.wehkamp.nl/service/search-navigation-components/img/logo_wehkamp-2scWN3RNjaEl.png" />
+<img src="https://resources.wehkamp.nl/2.5.1/images/logo_wehkamp.svg" />
 
 # Front-end guide
 
